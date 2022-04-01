@@ -503,7 +503,8 @@ async function searchEngine(session, search, image, imageId, tabActive) {
   const tab = await createTab({
     token,
     index: session.sourceTabIndex,
-    active: tabActive
+    active: tabActive,
+    openerTabId: session.sourceTabId,
   });
   const tabId = tab.id;
 
